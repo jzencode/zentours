@@ -1,7 +1,7 @@
 const express = require('express');
 const views = require('../controllers/viewsController');
 const authAPI = require('../controllers/authController');
-const bookingAPI = require('../controllers/bookingAPI');
+// const bookingAPI = require('../controllers/bookingAPI');
 
 // mapbox CSP
 const CSP = 'Content-Security-Policy';
@@ -26,7 +26,7 @@ router.use((req, res, next) => {
 
 router.get(
   '/',
-  bookingAPI.createBookingCheckout,
+  // bookingAPI.createBookingCheckout,
   authAPI.isLoggedIn,
   views.getOverview
 );
