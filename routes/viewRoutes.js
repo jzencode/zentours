@@ -33,6 +33,7 @@ router.get(
 router.get('/tours/:slug', authAPI.isLoggedIn, views.getTour);
 router.get('/login', authAPI.isLoggedIn, views.getLoginForm);
 router.get('/me', authAPI.protect, views.getAccount);
+
 router.get('/my-tours', authAPI.protect, views.getMyTours);
 
 router.post('/submit-user-data', authAPI.protect, views.updateUserData);
