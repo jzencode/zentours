@@ -24,6 +24,8 @@ router.use((req, res, next) => {
   next();
 });
 
+router.use(views.alerts);
+
 router.get(
   '/',
   // bookingAPI.createBookingCheckout,
